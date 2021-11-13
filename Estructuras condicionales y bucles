@@ -1,0 +1,173 @@
+Algoritmo CondicionalBucle
+	
+	Definir n, i, j Como Entero
+	//2.1 IF
+	Escribir 'IF'
+	Escribir ''
+	Escribir 'Con una estructura IF... si se cumplen las condiciones se ejecutará el código, por lo contrario, no retornará nada y la lectura del código seguirá por la siguiente línea'
+	Escribir ''
+	Escribir 'Dime un número del 1 al 10'
+	Leer n
+	Si (n>=1 y n<=10) Entonces
+		Escribir 'El numero escrito es : ',n
+	FinSi
+	
+	Escribir "-------------------------------------------------------------------------"
+	//2.2 IF...ELSE
+	Escribir 'IF...ELSE'
+	Escribir ''
+	Escribir 'Pulsa Enter para seguir' Sin Saltar
+	Leer j
+	Escribir ''
+	Escribir "En este caso, con la esrtructura condicional IF...ELSE si se escribe un número entre el 1 y el 10 (condición), devuelve el número escrito (código ejecutado), si no, salta un mensaje de Error (se ejecuta la parte del ELSE)'
+	Escribir ''
+	Escribir 'Dime otro número del 1 al 10'
+	Leer n
+	Si (n>=1 y n<=10) Entonces
+		Escribir 'El numero escrito es : ',n
+	SiNo
+		Escribir 'Error'
+	FinSi
+	
+	
+	Escribir "-------------------------------------------------------------------------"
+	//2.3 IF...ELSE IF
+	Escribir 'IF...ELSE IF'
+	Escribir ''
+	Escribir 'Pulsa Enter para seguir' Sin Saltar
+	Leer j
+	Escribir ''
+	Escribir "La estructura IF...ELSE IF es una estructura condicional formada por dos o más estructuras IF...ELSE anidadas, de modo que si no se ejecuta el código del IF, el código seguirá leyendo el codigo del ELSE que tendrá una nueva condición (IF) que si no se cumple, pasará al siguiente ELSE y así hasta que se cumpla un IF o lea el último ELSE y retorne su valor"
+	Escribir ''
+	Escribir 'Dime otro número del 1 al 10'
+	Leer n
+	Si (n>=1 y n<=5) Entonces
+		Escribir 'El numero escrito se comprende entre el 1 y el 5'
+	SiNo Si (n>=6 y n<=10) Entonces
+			Escribir 'El numero escrito se comprende entre el 6 y el 10'
+		SiNo
+			Escribir 'Error'
+		FinSi
+	FinSi
+	
+	Escribir "-------------------------------------------------------------------------"
+	//2.4 SWITCH CASE
+	Escribir 'SWITCH'
+	Escribir ''
+	Escribir 'Pulsa Enter para seguir' Sin Saltar
+	Leer j
+	Escribir ''
+	Escribir 'Con SWITCH podemos establecer diferentes acciones según los diferentes casos que establezcamos. Con nuestro ejemplo según el número que escribamos entre el 1 y el 10 nos lo devolverá en forma de cadena de caracteres, sino, saltará el mensaje de error como en los anteriores ejemplos con IF'
+	Escribir ''
+	Escribir 'Escribe un número del 1 al 10'
+	Leer n
+	Segun n Hacer
+		1:
+			Escribir 'Has escrito el número: ',n
+		2:
+			Escribir 'Has escrito el número: ',n
+		3:
+			Escribir 'Has escrito el número: ',n
+		4:
+			Escribir 'Has escrito el número: ',n
+		5:
+			Escribir 'Has escrito el número: ',n
+		6:
+			Escribir 'Has escrito el número: ',n
+		7:
+			Escribir 'Has escrito el número: ',n
+		8:
+			Escribir 'Has escrito el número: ',n
+		9:
+			Escribir 'Has escrito el número: ',n
+		10:
+			Escribir 'Has escrito el número: ',n
+			
+		De Otro Modo:
+			Escribir 'Error'
+	Fin Segun
+	
+	
+	Escribir "-------------------------------------------------------------------------"
+	//2.5 FOR
+	Escribir 'FOR'
+	Escribir ''
+	Escribir 'Pulsa Enter para seguir' Sin Saltar
+	Leer j
+	Escribir ''
+	Escribir 'La estructura FOR es un bucle en el cual puedes crear una secuencia de iteraciones limitada por un valor inicial establecido por un índice y un valor final previamente definido (si no está definido sería infinito el número de iteraciones) para detener el bucle. Por ejemplo, podríamos hacer una tabla de multiplicar cuyo índice empieza en 1 y su valor final en 10'
+	Escribir ''
+	Escribir 'Escribe un número del 1 al 10'
+	Leer n
+	
+	Escribir ''
+	Para i<-1 Hasta 10 Hacer
+			Escribir i," x ",n,"= ",n*i
+	FinPara
+	
+	Escribir ''
+	Escribir 'También se puede decidir si se recorrerá toda la cadena de valores o si habrá saltos omitiendo algunos de los datos, por ejemplo, nos saltaremos en la tabla de multiplicar los números pares'
+	Escribir ''
+	Escribir 'Escribe un número del 1 al 10'
+	Leer n
+	
+	Escribir ''
+	Para i<-1 Hasta 10 Con Paso 2 Hacer
+		Escribir i," x ",n,"= ",n*i
+	FinPara
+	
+	Escribir ''
+	Escribir 'Pulsa Enter para otro ejemplo'
+	Leer j
+	Escribir 'Al igual que en la estructura condicional de IF...ELSE IF, el bucle FOR tambíen puede tener una estructura anidada'
+	Escribir ''
+
+	Para i<-1 Hasta 3 Hacer
+		Para n<-1 Hasta 3 Hacer
+			Escribir i," x ",n,"= ",n*i
+		FinPara
+	FinPara
+	Escribir 'Pulsa Enter para seguir' Sin Saltar
+	Leer j
+	Escribir "-------------------------------------------------------------------------"
+	//2.6 WHILE
+	Escribir 'WHILE'
+	Escribir ''
+	Escribir 'Con WHILE creamos un bucle cuyo contenido solo se ejecutará si su condición se cumple y se repetirá constantemente hasta que su condición deje de cumplirse'
+	Escribir ''
+	
+	n<-0 //asignamos 0 a nuestra variable para asegurarnos de entrar en el ejemplo
+	Mientras n<>10 Hacer
+		Escribir '¿Cuál es el resultado de la suma 5+5?'
+		Leer n
+		Si n<>10 Entonces
+			Escribir 'Has fallado, intentalo de nuevo'
+			Escribir ''
+		FinSi
+	FinMientras
+	
+	Escribir '¡Enohorabuena, has acertado! El resultado de 5+5 es: ',n, '. Has conseguido salir del bucle WHILE'
+	
+	
+	Escribir "-------------------------------------------------------------------------"
+	//2.7 DO WHILE
+	Escribir 'DO WHILE'
+	Escribir ''
+	Escribir 'Pulsa Enter para seguir' Sin Saltar
+	Leer j
+	Escribir ''
+	Escribir 'Con la estructura DO WHILE, a diferencia de la estructura WHILE, nos aseguramos que entramos al menos una vez en nuestro bucle hasta cumplir nuestra condición para poder salir de este'
+	Escribir ''
+	
+	Repetir
+		Escribir '¿Cuál es el resultado de la multiplicación 3*7?'
+		Leer n
+		Si n<>21 Entonces
+			Escribir 'Has fallado, intentalo de nuevo'
+			Escribir ''
+		FinSi
+	Hasta Que n=21
+	
+	Escribir '¡Enohorabuena, has acertado! El resultado de 3*7 es: ',n, '. Has conseguido salir del bucle DO WHILE'
+	
+FinAlgoritmo
