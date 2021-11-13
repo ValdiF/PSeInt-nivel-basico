@@ -1,0 +1,67 @@
+Algoritmo GestionVariables
+	
+	//Diseña un programa en Pseint que declare variables para almacenar tipos de datos cadena, carácter, entero, decimal, booleano
+	Definir num Como Entero
+	Definir letra Como Caracter
+	Definir booleano Como Logico
+	Definir flotante Como Real
+	Definir string Como Cadena
+	
+	//Asignar contenido a cada una de las variables
+	num <- 1
+	letra <- "a" 
+	flotante <- 1.5
+	string <- "Hola"
+	booleano <- Falso
+	
+	//Mostrar el resultado por consola
+	Escribir "Estas son las variables asignadas hasta ahora : "
+	Escribir " "
+	Escribir " "
+	Escribir num, " como Entero"
+	Escribir letra, " como Caracter"
+	Escribir flotante, " como Real"
+	Escribir string, " como Cadena"
+	Escribir booleano, " como Lógico"
+	
+	Escribir "-------------------------------------------------------------------------"
+	Escribir " "
+	Escribir " "
+	Escribir "También se puede asignar valores leyendolos por consola"
+	Escribir " "
+	Escribir " "
+	Escribir "Dime un número"
+	Leer num
+	Escribir "Dime una letra del abecedario"
+	Leer letra
+	Escribir "Dime un número decimal (pseint lee los números decimales con . y no con ,)"
+	Leer flotante
+	Escribir "Dime una palabra o una frase"
+	Leer string
+	Escribir "Escribe: verdadero o falso"
+	Leer booleano
+	
+	//Mostrar el resultado por consola
+	Escribir " "
+	Escribir " "
+	Escribir "Estas son las variables asignadas hasta ahora : "
+	Escribir " "
+	Escribir " "
+	Escribir num, " como Entero"
+	Escribir letra, " como Caracter"
+	Escribir flotante, " como Real"
+	Escribir string, " como Cadena"
+	Escribir booleano, " como Lógico"
+	//Utilizar funciones de cadena o numéricas explicando un ejemplo (por ejemplo, variable de cadena con un texto, y una función muestra el total de letras de esa cadena)
+	Escribir "-------------------------------------------------------------------------"
+	Escribir " "
+	Escribir " "
+	Escribir "Para explicar un ejemplo de funciones de cadena, necesito que escribas una nueva palabra"
+	Leer string
+	Escribir " "
+	Escribir " "
+	Escribir "La longitud de la cadena es ",longitud(string);
+	Escribir "El primer carácter de cad1 es ", subcadena(string,0,0);
+	Escribir "El último carácter de cad1 es ", subcadena(string,Longitud(string)-1,Longitud(string)-1);
+	Escribir "La cadena escrita en mayúsculas es ",mayusculas(string);
+FinAlgoritmo
