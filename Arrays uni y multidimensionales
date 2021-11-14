@@ -1,0 +1,76 @@
+Algoritmo ListaArrayUniMultiDimensional
+	//3 Arreglos Unidimensionales y Multidimensionales
+	//3.1 Array Unidimensional
+	Definir destinos, viajes, ciudad, nomenclatura, j Como Cadena
+	Definir i, dia, verifDia, mes, verifMes Como Entero
+	Definir precio, acumPrecio, mediaPrecio  Como Real
+	
+	Dimensión destinos[5]
+	
+	Escribir 'En los Arrays unidimensionales solo contienen una dimensión con una cantidad máxima de elementos establecida para guardar en su interior. Por ejemplo, vamos a crear una lista de 5 ciudades para hacer viajes'
+	Para i<-0 Hasta 4 Con Paso 1 Hacer
+		Escribir 'Dime el nombre de una ciudad como destino de viaje'
+		Leer destinos[i]
+	FinPara
+	
+	Escribir 'Dime que un número del 1 al 5 para ver que ciudad guardaste en esa posición de la lista como destino de tu viaje'
+	leer i
+	i<-i-1
+	Escribir 'El destino seleccionado es: ',destinos(i)
+	Escribir 'pulsa entre para seguir' Sin Saltar
+	Leer j
+	Escribir'---------------------------------------------------------'
+	//3.2 Array Multidimensional 
+	Escribir ''
+	Escribir 'En los Arrays multidimensionales existen dos o más dimensiones y se utilizan para crear tablas(2 dimensiones), cuadros(3 dimensiones)... Por ejemplo, vamos a crear una  tabla en la que una agencia de viajes establecerá un viaje con cinco lugares de destino, su precio y la fecha en la que se hará el viaje'
+	Dimension viajes[5,3]
+	verifDia<-0
+	verifMes<-0
+	acumPrecio<-0
+	
+	Para i<-0 Hasta 4 Con Paso 1 Hacer
+		Escribir 'Dime el nombre de una ciudad como destino de viaje'
+		Leer ciudad
+		Escribir 'Dime el precio de este viaje'
+		Leer precio
+		acumPrecio<-acumPrecio+precio
+		Escribir 'Dime para que fecha está establecido realizar este viaje (Ten en cuenta que los viajes van  en orden y no podrás elegir una fecha anterior a esta para el siguiente viaje). Se elegirá primero el día y luego el mes'
+		Leer dia, mes
+		
+		Mientras  dia>31 o mes>12 o dia<1 o mes<1 Hacer
+			Escribir 'Esta fecha no existe, vuelve a repetir la fecha. Escribir primero el día y luego el mes'
+			Leer dia, mes
+		FinMientras
+		
+		Mientras mes<=verifMes y dia<=verifDia Hacer
+			Escribir 'La fecha elegida es anterior o no tiene un intervalo de tres dias en cuanto a la fecha del viaje previo, tienes que escribir una fecha posterior a esta. Vuelve a escribir la fecha, primero el día y luego el mes. La fecha para el viaje anterior es: ',verifDia,'/',verifMes
+			Leer dia, mes
+			Mientras  dia>31 o mes>12 o dia<1 o mes<1 Hacer
+				Escribir 'Esta fecha no existe, vuelve a repetir la fecha. Escribir primero el día y luego el mes'
+				Leer dia, mes
+			FinMientras
+		FinMientras
+		
+		verifMes<-mes
+		verifDia<-dia
+		
+		nomenclatura<-Concatenar(ConvertirATexto(dia),'/')
+		viajes[i,0]<-ciudad
+		viajes[i,1]<-ConvertirATexto(precio)
+		viajes[i,2]<-Concatenar(nomenclatura,ConvertirATexto(mes))
+		
+		
+	FinPara
+	
+	Escribir 'Dime un número del 1 al 5 para ver que ciudad guardaste en esa posición de la lista como destino de tu viaje y su información'
+	leer i
+	i<-i-1
+	mediaPrecio<-acumPrecio/5
+	Escribir 'El viaje será a la ciudad de ',viajes[i,0],' con precio de ',viajes[i,1],'$ y se realizará el ',viajes[i,2]
+	Escribir 'El precio total de los viajes será de: ',acumPrecio,'$, con un valor medio de ',mediaPrecio,'$ por viaje'
+	Escribir 'pulsa entre para seguir' Sin Saltar
+	Leer j
+	Escribir'---------------------------------------------------------'
+	Escribir ''
+	Escribir 'En estos ejemplo hemos creado primero una lista para guardar ciudades como destino de viaje y luego consultarlo por medio de un índice que nos devuelve el nombre de la ciudad ubicado en ese número. En el segundo ejemplo, mediante un array bidimensional o tabla, hemos introducido primero el nombre de las ciudades que la agencia de viajes oferta, su precio y fecha en la que se realizará, y después hemos sumado la cantidad total de precios de los viajes y su valor medio'
+FinAlgoritmo
